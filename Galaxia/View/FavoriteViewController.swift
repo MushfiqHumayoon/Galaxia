@@ -27,6 +27,7 @@ class FavoriteViewController: UIViewController {
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .none
         let planetNib = UINib(nibName: PlanetTableViewCell.Identifier(), bundle: .main)
         tableView.register(planetNib, forCellReuseIdentifier: PlanetTableViewCell.Identifier())
     }

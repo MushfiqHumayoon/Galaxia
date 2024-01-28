@@ -15,7 +15,6 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var navigationView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var segmentedView: SSSegmentedControl!
     // MARK: - Properties
     var previewYOffset: CGFloat = 0
@@ -28,8 +27,8 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         setupSeachField()
         setupTableView()
-//        setupActivityIndicator()
-//        initBindings()
+        setupActivityIndicator()
+        initBindings()
     }
     private func setupActivityIndicator() {
         view.addSubview(activityIndicator)
@@ -68,6 +67,7 @@ class DetailViewController: UIViewController {
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .none
         let planetNib = UINib(nibName: PlanetTableViewCell.Identifier(), bundle: .main)
         tableView.register(planetNib, forCellReuseIdentifier: PlanetTableViewCell.Identifier())
     }
@@ -80,13 +80,13 @@ extension DetailViewController: UITableViewDataSource {
         1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10// viewModel.planetList.count
+        viewModel.planetList.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PlanetTableViewCell.Identifier(), for: indexPath) as? PlanetTableViewCell else { return PlanetTableViewCell() }
         cell.selectionStyle = .none
         cell.colorTheme = .light
-//        cell.setFetchedData(viewModel.planetList[indexPath.row])
+        cell.setFetchedData(viewModel.planetList[indexPath.row])
         return cell
     }
 }
@@ -106,6 +106,7 @@ extension DetailViewController: UIScrollViewDelegate {
             self.titleLabel.alpha = yOffset > self.previewYOffset ? 1 : 0
             self.searchFieldHeightConstraint.constant = yOffset > self.previewYOffset ? -48 : 14
             self.navigationViewHeightConstraint.constant = yOffset > self.previewYOffset ? 148 : 164
+            self.segmentedView.backgroundColor = yOffset > self.previewYOffset ? .segmentBackround : .clear
             self.view.layoutIfNeeded()
         })
         previewYOffset = yOffset
