@@ -4,8 +4,8 @@
 An app with galaxy, planets and details.
 
 ## Features
-Custom Segmented View
-Custom TabBar
+Custom Segmented View,
+Custom TabBar,
 Tab Switch Animations
 
 
