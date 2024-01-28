@@ -95,7 +95,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		010B172C2B66701A00CC9FC8 /* fonts */ = {
+		010B172C2B66701A00CC9FC8 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
 				010B172D2B66701A00CC9FC8 /* Inter-Medium.ttf */,
@@ -108,7 +108,7 @@
 				010B17342B66701A00CC9FC8 /* Inter-Black.ttf */,
 				010B17352B66701A00CC9FC8 /* Inter-SemiBold.ttf */,
 			);
-			path = fonts;
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		010B173F2B66743500CC9FC8 /* Extensions */ = {
@@ -162,6 +162,14 @@
 				010B175F2B66CDDE00CC9FC8 /* ChipCollectionViewCell.xib */,
 			);
 			path = ChipCell;
+			sourceTree = "<group>";
+		};
+		010B17622B66E2E200CC9FC8 /* SegmentedView */ = {
+			isa = PBXGroup;
+			children = (
+				010B17592B66BFB200CC9FC8 /* CustomSegmentedView.swift */,
+			);
+			path = SegmentedView;
 			sourceTree = "<group>";
 		};
 		012D39B92B66342B00BBC84E = {
@@ -257,10 +265,10 @@
 		01F1C61D2B6644A200DF3C64 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				010B172C2B66701A00CC9FC8 /* fonts */,
+				010B172C2B66701A00CC9FC8 /* Fonts */,
 				019646B62B6662AB001B2C39 /* SearchTextField */,
 				01F1C61E2B6644B000DF3C64 /* TabBarController */,
-				010B17592B66BFB200CC9FC8 /* CustomSegmentedView.swift */,
+				010B17622B66E2E200CC9FC8 /* SegmentedView */,
 			);
 			path = Common;
 			sourceTree = "<group>";

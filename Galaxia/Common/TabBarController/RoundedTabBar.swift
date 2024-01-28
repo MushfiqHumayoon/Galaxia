@@ -25,6 +25,9 @@ class RoundedTabBar: UITabBar {
         makeBackgroundTransparent()
         setupSelectionIndicator()
     }
+    override func layoutIfNeeded() {
+        makeBackgroundTransparent()
+    }
     fileprivate func makeBackgroundTransparent() {
         self.backgroundImage = UIImage()
         self.shadowImage = UIImage()
@@ -35,7 +38,6 @@ class RoundedTabBar: UITabBar {
         dotIndicator.layer.cornerRadius = 3
         dotIndicator.frame = CGRect(x: 0, y: 0, width: 6, height: 6)
         addSubview(dotIndicator)
-        // adding gradient layer
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [UIColor(red: 0, green: 0.308, blue: 0.771, alpha: 1).cgColor,
                                 UIColor(red: 0.292, green: 0.099, blue: 0.992, alpha: 1).cgColor]
@@ -49,7 +51,7 @@ class RoundedTabBar: UITabBar {
         self.backgroundColor = .primaryOnSurface
         let frame = CGRect(x: padding, y: 0, width: rect.width - (padding*2), height: 82)
         let bezierPath = UIBezierPath(roundedRect: frame, cornerRadius: 20)
-        UIColor.primaryDark.setFill() // Set this to your desired background color
+        UIColor.primaryDark.setFill()
         bezierPath.fill()
     }
 
