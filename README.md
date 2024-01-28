@@ -1,7 +1,7 @@
 # Galaxia
 
 ## Introduction
-[Short description of the Galaxia project]
+An app with galaxy, planets and details.
 
 ## Features
 Custom Segmented View
