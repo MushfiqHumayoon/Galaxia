@@ -269,7 +269,7 @@
                                 </constraints>
                             </view>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="vBp-QM-bv8">
-                                <rect key="frame" x="138.66666666666666" y="405" width="116" height="26"/>
+                                <rect key="frame" x="138.66666666666666" y="400" width="116" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="9qI-KM-BUk"/>
                                     <constraint firstAttribute="width" constant="116" id="tqI-hI-ouz"/>
@@ -294,7 +294,7 @@
                             <constraint firstItem="BTc-ZS-z38" firstAttribute="centerY" secondItem="Ddt-Kk-XLR" secondAttribute="centerY" id="c6d-9I-1PG"/>
                             <constraint firstItem="Mwq-c4-e9v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="ddA-fu-p3d"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ddt-Kk-XLR" secondAttribute="trailing" constant="18" id="jjx-0h-5HV"/>
-                            <constraint firstItem="vBp-QM-bv8" firstAttribute="centerY" secondItem="Y2e-pj-Axa" secondAttribute="centerY" constant="80" id="oWt-06-U1t"/>
+                            <constraint firstItem="vBp-QM-bv8" firstAttribute="centerY" secondItem="Y2e-pj-Axa" secondAttribute="centerY" constant="75" id="oWt-06-U1t"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LvZ-Lg-Go4" secondAttribute="trailing" id="pTi-TW-Egn"/>
                             <constraint firstItem="LvZ-Lg-Go4" firstAttribute="top" secondItem="Y2e-pj-Axa" secondAttribute="bottom" constant="30" id="yYa-bE-hDd"/>
                         </constraints>

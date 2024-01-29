@@ -63,6 +63,26 @@ class HomeViewController: UIViewController {
             backgroundViews.forEach { $0.layer.cornerRadius = 16 }
         }
     }
+    // MARK: - updatePageControl
+    fileprivate func updatePageControl() {
+        let pageIndex = round(collectionView.contentOffset.x/view.frame.width)
+        pageControl.currentPage = Int(pageIndex)
+    }
+    // MARK: - UpdateCellOpacity onSlide
+    fileprivate func updateCellOpacity() {
+        let minVisibleIndex = max(Int(collectionView.contentOffset.x) / Int(collectionView.bounds.width), .zero)
+        let deltaOffset = Int(collectionView.contentOffset.x) % Int(collectionView.bounds.width)
+        let percentageDeltaOffset = CGFloat(deltaOffset) / collectionView.bounds.width
+        if let cells = collectionView.visibleCells as? [SlideCollectionViewCell],
+           (cells.count - 1) >= minVisibleIndex {
+            if minVisibleIndex == .zero {
+                cells[.zero].contentView.alpha = abs(percentageDeltaOffset)
+            } else {
+                cells[minVisibleIndex].contentView.alpha = percentageDeltaOffset
+            }
+        }
+    }
+    // MARK: - ViewDidDisappear
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         toggleSubViews(show: false, animatableViews: animatableViews, direction: .right)
@@ -77,6 +97,7 @@ extension HomeViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: SlideCollectionViewCell.Identifier(), for: indexPath) as? SlideCollectionViewCell
         else { return SlideCollectionViewCell() }
+        if indexPath.row > 0 { cell.contentView.alpha = 0 }
         return cell
     }
 }
@@ -86,9 +107,10 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
 }
 // MARK: - CollectionView PageControl Setup
 extension HomeViewController: UIScrollViewDelegate {
+    // MARK: - ScrollViewDidScroll
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let pageIndex = round(scrollView.contentOffset.x/view.frame.width)
-        pageControl.currentPage = Int(pageIndex)
+        updatePageControl()
+        updateCellOpacity()
     }
 }
 // MARK: - CollectionView Delegate

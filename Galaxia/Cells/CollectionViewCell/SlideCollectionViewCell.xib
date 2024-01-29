@@ -33,7 +33,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="195.33333333333334" height="184"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CNY-Xr-FXl">
-                        <rect key="frame" x="22" y="49.333333333333343" width="90" height="32"/>
+                        <rect key="frame" x="22" y="49.666666666666657" width="90" height="32"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="32" id="NG1-Pg-msy"/>
                         </constraints>
@@ -42,7 +42,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MARS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htS-st-pmf">
-                        <rect key="frame" x="22" y="71.333333333333314" width="178.66666666666666" height="72.666666666666686"/>
+                        <rect key="frame" x="22" y="71.666666666666657" width="178.66666666666666" height="72.666666666666657"/>
                         <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="60"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -59,8 +59,8 @@
                 <constraint firstItem="3si-dk-RKy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="GyR-l9-cAI"/>
                 <constraint firstItem="o9M-1p-qT7" firstAttribute="width" secondItem="3si-dk-RKy" secondAttribute="width" multiplier="0.55" id="NIK-yV-6YB"/>
                 <constraint firstItem="CNY-Xr-FXl" firstAttribute="leading" secondItem="htS-st-pmf" secondAttribute="leading" id="Swk-SD-PjJ"/>
+                <constraint firstItem="htS-st-pmf" firstAttribute="centerY" secondItem="3si-dk-RKy" secondAttribute="centerY" constant="16" id="TrW-0v-xSb"/>
                 <constraint firstItem="htS-st-pmf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="22" id="VmA-Vb-iCX"/>
-                <constraint firstAttribute="bottom" secondItem="htS-st-pmf" secondAttribute="bottom" constant="40" id="awX-cs-OnO"/>
                 <constraint firstAttribute="bottom" secondItem="3si-dk-RKy" secondAttribute="bottom" id="dmE-nV-CMv"/>
                 <constraint firstAttribute="bottom" secondItem="o9M-1p-qT7" secondAttribute="bottom" id="sQE-ad-dO4"/>
                 <constraint firstItem="htS-st-pmf" firstAttribute="top" secondItem="CNY-Xr-FXl" secondAttribute="bottom" constant="-10" id="wHW-FI-BRb"/>

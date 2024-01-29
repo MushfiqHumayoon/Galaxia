@@ -1,6 +1,6 @@
 //
 //  StackCollectionViewLayout.swift
-//  stack
+//  Edited by Mushfiq
 //
 //  Created by Astemir Eleev on 21.06.2020.
 //  Copyright © 2020 Astemir Eleev. All rights reserved.
@@ -11,16 +11,15 @@ import UIKit
 open class StackCollectionViewLayout: UICollectionViewLayout {
     
     // MARK: - Properties
-    
     public var itemDescription: (landscape: ItemSize, portrait: ItemSize) =
         (landscape: .verticalAspectFit(spacing: 24, aspect: 1),
-         portrait: .horizontalAspectFit(spacing: 10, aspect: 2.0)) {
+         portrait: .horizontalAspectFit(spacing: 12, aspect: 2)) {
         didSet {
             invalidateLayout()
         }
     }
     
-    public var spacing: CGFloat = 20 {
+    public var spacing: CGFloat = 30 {
         didSet{
             invalidateLayout()
         }
@@ -101,10 +100,9 @@ open class StackCollectionViewLayout: UICollectionViewLayout {
     }
     
     // MARK: - Private Helpers
-    
     private func scale(at index: Int) -> CGFloat {
-        let translatedCoefficient = CGFloat(index) - CGFloat(self.maximumVisibleItems) / 2
-        return CGFloat(pow(0.95, translatedCoefficient))
+        let translatedCoefficient = CGFloat(index) - CGFloat(self.maximumVisibleItems) / 8
+        return CGFloat(pow(0.75, translatedCoefficient))
     }
     
     private func transform(atCurrentVisibleIndex visibleIndex: Int, percentageOffset: CGFloat) -> CGAffineTransform {
