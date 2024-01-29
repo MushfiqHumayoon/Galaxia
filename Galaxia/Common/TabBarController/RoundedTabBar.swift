@@ -25,9 +25,6 @@ class RoundedTabBar: UITabBar {
         makeBackgroundTransparent()
         setupSelectionIndicator()
     }
-    override func layoutIfNeeded() {
-        makeBackgroundTransparent()
-    }
     fileprivate func makeBackgroundTransparent() {
         self.backgroundImage = UIImage()
         self.shadowImage = UIImage()
@@ -48,7 +45,6 @@ class RoundedTabBar: UITabBar {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         let padding: CGFloat = 12
-        self.backgroundColor = .primaryOnSurface
         let frame = CGRect(x: padding, y: 0, width: rect.width - (padding*2), height: 82)
         let bezierPath = UIBezierPath(roundedRect: frame, cornerRadius: 20)
         UIColor.primaryDark.setFill()

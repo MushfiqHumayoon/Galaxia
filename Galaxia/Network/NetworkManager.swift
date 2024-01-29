@@ -7,38 +7,6 @@
 
 import UIKit
 
-//class NetworkManager {
-//    static let shared = NetworkManager()
-//    private init() {}
-//
-//    func fetchApiData(completion: @escaping (Result<[ApiResult], Error>) -> Void) {
-//        guard let url = URL(string: "http://test.lascade.com/api/test/list") else {
-//            completion(.failure(NetworkError.invalidUrl))
-//            return
-//        }
-//
-//        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-//            if let error = error {
-//                completion(.failure(error))
-//                return
-//            }
-//
-//            guard let data = data else {
-//                completion(.failure(NetworkError.noData))
-//                return
-//            }
-//
-//            do {
-//                let apiResponse = try JSONDecoder().decode(ApiResponse.self, from: data)
-//                completion(.success(apiResponse.result))
-//            } catch {
-//                completion(.failure(error))
-//            }
-//        }
-//        task.resume()
-//    }
-//}
-//
 enum NetworkError: Error {
     case invalidUrl, noData
 }

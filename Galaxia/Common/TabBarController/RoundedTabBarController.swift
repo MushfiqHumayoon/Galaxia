@@ -19,7 +19,7 @@ class RoundedTabBarController: UITabBarController {
             tabBarItems[2].image = .heartOutlined
             tabBarItems[2].selectedImage = .heartFilled
         }
-        self.tabBar.tintColor = UIColor.white
-        self.tabBar.unselectedItemTintColor = UIColor.gray
+        tabBar.tintColor = UIColor.white
+        tabBar.unselectedItemTintColor = UIColor.gray
     }
 }

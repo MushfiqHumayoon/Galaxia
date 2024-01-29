@@ -87,8 +87,8 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
 // MARK: - CollectionView PageControl Setup
 extension HomeViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-       let pageIndex = round(scrollView.contentOffset.x/view.frame.width)
-       pageControl.currentPage = Int(pageIndex)
+        let pageIndex = round(scrollView.contentOffset.x/view.frame.width)
+        pageControl.currentPage = Int(pageIndex)
     }
 }
 // MARK: - CollectionView Delegate
