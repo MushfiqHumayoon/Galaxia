@@ -29,6 +29,8 @@
 		010B175C2B66C36E00CC9FC8 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B175B2B66C36E00CC9FC8 /* UIFont+Extension.swift */; };
 		010B17602B66CDDE00CC9FC8 /* ChipCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B175E2B66CDDE00CC9FC8 /* ChipCollectionViewCell.swift */; };
 		010B17612B66CDDE00CC9FC8 /* ChipCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 010B175F2B66CDDE00CC9FC8 /* ChipCollectionViewCell.xib */; };
+		011AAD4C2B6755EC0050C46B /* StackCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011AAD4B2B6755EC0050C46B /* StackCollectionViewLayout.swift */; };
+		011AAD4E2B6756120050C46B /* ItemSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011AAD4D2B6756120050C46B /* ItemSize.swift */; };
 		012D39C62B66342B00BBC84E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012D39C52B66342B00BBC84E /* AppDelegate.swift */; };
 		012D39C82B66342B00BBC84E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012D39C72B66342B00BBC84E /* SceneDelegate.swift */; };
 		012D39CA2B66342B00BBC84E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012D39C92B66342B00BBC84E /* HomeViewController.swift */; };
@@ -67,6 +69,8 @@
 		010B175B2B66C36E00CC9FC8 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		010B175E2B66CDDE00CC9FC8 /* ChipCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipCollectionViewCell.swift; sourceTree = "<group>"; };
 		010B175F2B66CDDE00CC9FC8 /* ChipCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChipCollectionViewCell.xib; sourceTree = "<group>"; };
+		011AAD4B2B6755EC0050C46B /* StackCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackCollectionViewLayout.swift; sourceTree = "<group>"; };
+		011AAD4D2B6756120050C46B /* ItemSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSize.swift; sourceTree = "<group>"; };
 		012D39C22B66342B00BBC84E /* Galaxia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Galaxia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		012D39C52B66342B00BBC84E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		012D39C72B66342B00BBC84E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -172,6 +176,15 @@
 			path = SegmentedView;
 			sourceTree = "<group>";
 		};
+		011AAD4A2B6755A80050C46B /* CollectionStackLayout */ = {
+			isa = PBXGroup;
+			children = (
+				011AAD4B2B6755EC0050C46B /* StackCollectionViewLayout.swift */,
+				011AAD4D2B6756120050C46B /* ItemSize.swift */,
+			);
+			path = CollectionStackLayout;
+			sourceTree = "<group>";
+		};
 		012D39B92B66342B00BBC84E = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +282,7 @@
 				019646B62B6662AB001B2C39 /* SearchTextField */,
 				01F1C61E2B6644B000DF3C64 /* TabBarController */,
 				010B17622B66E2E200CC9FC8 /* SegmentedView */,
+				011AAD4A2B6755A80050C46B /* CollectionStackLayout */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -367,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				010B17552B66B41F00CC9FC8 /* SlideCollectionViewCell.swift in Sources */,
+				011AAD4C2B6755EC0050C46B /* StackCollectionViewLayout.swift in Sources */,
 				010B175A2B66BFB200CC9FC8 /* CustomSegmentedView.swift in Sources */,
 				010B17472B668F4C00CC9FC8 /* NetworkManager.swift in Sources */,
 				012D39CA2B66342B00BBC84E /* HomeViewController.swift in Sources */,
@@ -377,6 +392,7 @@
 				019646BD2B666783001B2C39 /* PlanetTableViewCell.swift in Sources */,
 				012D39C62B66342B00BBC84E /* AppDelegate.swift in Sources */,
 				012D39C82B66342B00BBC84E /* SceneDelegate.swift in Sources */,
+				011AAD4E2B6756120050C46B /* ItemSize.swift in Sources */,
 				019646B52B666208001B2C39 /* AppConstants.swift in Sources */,
 				010B17492B668F6800CC9FC8 /* ApiResponse.swift in Sources */,
 				01F1C6202B6644D000DF3C64 /* RoundedTabBarController.swift in Sources */,

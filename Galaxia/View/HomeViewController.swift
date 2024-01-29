@@ -49,6 +49,10 @@ class HomeViewController: UIViewController {
         collectionView.dataSource = self
         let slideNib = UINib(nibName: SlideCollectionViewCell.Identifier(), bundle: .main)
         collectionView.register(slideNib, forCellWithReuseIdentifier: SlideCollectionViewCell.Identifier())
+        let layout = StackCollectionViewLayout()
+        collectionView.setCollectionViewLayout(layout, animated: true)
+        pageControl.currentPageIndicatorTintColor = .pageSelectedTint
+        pageControl.pageIndicatorTintColor = .pageTint
     }
     // MARK: - Setup Galaxy Stack
     private func setupGalaxyStackView() {
