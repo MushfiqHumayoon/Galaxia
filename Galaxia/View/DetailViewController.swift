@@ -18,6 +18,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var segmentedView: SSSegmentedControl!
     // MARK: - Properties
     var previewYOffset: CGFloat = 0
+    var initialHeight: CGFloat = deviceHasNotch ? 164 : 134
     // MARK: - ViewModel
     private let viewModel = DetailViewModel()
     
@@ -25,10 +26,15 @@ class DetailViewController: UIViewController {
     // MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureNavigationHeight()
         setupSeachField()
         setupTableView()
         setupActivityIndicator()
         initBindings()
+    }
+    private func configureNavigationHeight() {
+        navigationViewHeightConstraint.constant = initialHeight
+        self.view.layoutIfNeeded()
     }
     private func setupActivityIndicator() {
         view.addSubview(activityIndicator)
@@ -105,7 +111,7 @@ extension DetailViewController: UIScrollViewDelegate {
             self.searchTextField.alpha = yOffset > self.previewYOffset ? 0 : 1
             self.titleLabel.alpha = yOffset > self.previewYOffset ? 1 : 0
             self.searchFieldHeightConstraint.constant = yOffset > self.previewYOffset ? -48 : 14
-            self.navigationViewHeightConstraint.constant = yOffset > self.previewYOffset ? 148 : 164
+            self.navigationViewHeightConstraint.constant = yOffset > self.previewYOffset ? self.initialHeight-16 : self.initialHeight
             self.segmentedView.backgroundColor = yOffset > self.previewYOffset ? .segmentBackround : .clear
             self.view.layoutIfNeeded()
         })

@@ -29,15 +29,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="galaxiaIcon" translatesAutoresizingMaskIntoConstraints="NO" id="BTc-ZS-z38">
-                                <rect key="frame" x="18" y="59" width="116" height="46.333333333333343"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="galaxiaIcon" translatesAutoresizingMaskIntoConstraints="NO" id="BTc-ZS-z38">
+                                <rect key="frame" x="18" y="80" width="116" height="34.333333333333343"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="Ddt-Kk-XLR">
-                                <rect key="frame" x="329" y="59" width="46" height="46.333333333333343"/>
+                                <rect key="frame" x="329" y="74" width="46" height="46.333333333333343"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search your destination" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mwq-c4-e9v" customClass="SearchTextField" customModule="Galaxia" customModuleProvider="target">
-                                <rect key="frame" x="18" y="139.33333333333334" width="357" height="55"/>
+                                <rect key="frame" x="18" y="154.33333333333334" width="357" height="55"/>
                                 <color key="backgroundColor" name="primaryOnSurface"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="qMf-hM-9wY"/>
@@ -46,10 +45,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Y2e-pj-Axa">
-                                <rect key="frame" x="0.0" y="228.33333333333337" width="393" height="193"/>
+                                <rect key="frame" x="0.0" y="241.33333333333337" width="393" height="190"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="193" id="ZUM-bt-Mah"/>
+                                    <constraint firstAttribute="height" constant="190" id="ZUM-bt-Mah"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LMq-4K-DBf">
                                     <size key="itemSize" width="128" height="128"/>
@@ -60,7 +59,7 @@
                                 <cells/>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LvZ-Lg-Go4">
-                                <rect key="frame" x="0.0" y="455.33333333333331" width="393" height="22"/>
+                                <rect key="frame" x="0.0" y="461.33333333333331" width="393" height="22"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RWP-OF-YGd">
                                         <rect key="frame" x="0.0" y="10.666666666666686" width="158.66666666666666" height="1"/>
@@ -100,7 +99,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UYW-v7-B55">
-                                <rect key="frame" x="20" y="499.33333333333326" width="353" height="91"/>
+                                <rect key="frame" x="20" y="503.33333333333326" width="353" height="91"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bhH-x8-bcZ">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="91"/>
@@ -270,7 +269,7 @@
                                 </constraints>
                             </view>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="vBp-QM-bv8">
-                                <rect key="frame" x="138.66666666666666" y="392" width="116" height="26"/>
+                                <rect key="frame" x="138.66666666666666" y="403.33333333333331" width="116" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="9qI-KM-BUk"/>
                                     <constraint firstAttribute="width" constant="116" id="tqI-hI-ouz"/>
@@ -285,17 +284,19 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UYW-v7-B55" secondAttribute="trailing" constant="20" id="2wb-iQ-Xod"/>
                             <constraint firstItem="Mwq-c4-e9v" firstAttribute="top" secondItem="Ddt-Kk-XLR" secondAttribute="bottom" constant="34" id="7ZV-XQ-fJA"/>
                             <constraint firstItem="Y2e-pj-Axa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ar5-mI-cye"/>
+                            <constraint firstItem="BTc-ZS-z38" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="CPc-KC-ZDm"/>
                             <constraint firstItem="Y2e-pj-Axa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QCC-nI-Lhm"/>
                             <constraint firstItem="UYW-v7-B55" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QCw-qd-eKq"/>
-                            <constraint firstItem="Y2e-pj-Axa" firstAttribute="top" secondItem="Mwq-c4-e9v" secondAttribute="bottom" constant="34" id="TBt-ZS-I8P"/>
+                            <constraint firstItem="Y2e-pj-Axa" firstAttribute="top" secondItem="Mwq-c4-e9v" secondAttribute="bottom" constant="32" id="TBt-ZS-I8P"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mwq-c4-e9v" secondAttribute="trailing" constant="18" id="U6C-zQ-8iZ"/>
-                            <constraint firstItem="Ddt-Kk-XLR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UE7-Gl-67o"/>
-                            <constraint firstItem="UYW-v7-B55" firstAttribute="top" secondItem="LvZ-Lg-Go4" secondAttribute="bottom" constant="22" id="UZG-dc-yUD"/>
+                            <constraint firstItem="Ddt-Kk-XLR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="UE7-Gl-67o"/>
+                            <constraint firstItem="UYW-v7-B55" firstAttribute="top" secondItem="LvZ-Lg-Go4" secondAttribute="bottom" constant="20" id="UZG-dc-yUD"/>
+                            <constraint firstItem="BTc-ZS-z38" firstAttribute="centerY" secondItem="Ddt-Kk-XLR" secondAttribute="centerY" id="c6d-9I-1PG"/>
                             <constraint firstItem="Mwq-c4-e9v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="ddA-fu-p3d"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ddt-Kk-XLR" secondAttribute="trailing" constant="18" id="jjx-0h-5HV"/>
                             <constraint firstItem="vBp-QM-bv8" firstAttribute="centerY" secondItem="Y2e-pj-Axa" secondAttribute="centerY" constant="80" id="oWt-06-U1t"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LvZ-Lg-Go4" secondAttribute="trailing" id="pTi-TW-Egn"/>
-                            <constraint firstItem="LvZ-Lg-Go4" firstAttribute="top" secondItem="Y2e-pj-Axa" secondAttribute="bottom" constant="34" id="yYa-bE-hDd"/>
+                            <constraint firstItem="LvZ-Lg-Go4" firstAttribute="top" secondItem="Y2e-pj-Axa" secondAttribute="bottom" constant="30" id="yYa-bE-hDd"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="homeFilled" id="cua-xS-EAm"/>
